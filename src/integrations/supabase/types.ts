@@ -14,89 +14,7 @@ export type Database = {
   }
   public: {
     Tables: {
-      profiles: {
-        Row: {
-          created_at: string | null
-          full_name: string
-          id: string
-          language: string | null
-          role: Database["public"]["Enums"]["app_role"]
-          updated_at: string | null
-        }
-        Insert: {
-          created_at?: string | null
-          full_name: string
-          id: string
-          language?: string | null
-          role: Database["public"]["Enums"]["app_role"]
-          updated_at?: string | null
-        }
-        Update: {
-          created_at?: string | null
-          full_name?: string
-          id?: string
-          language?: string | null
-          role?: Database["public"]["Enums"]["app_role"]
-          updated_at?: string | null
-        }
-        Relationships: []
-      }
-      projects: {
-        Row: {
-          category: string
-          contact_email: string | null
-          contact_telegram: string | null
-          created_at: string | null
-          description: string
-          funding_range: string | null
-          id: string
-          image_urls: string[] | null
-          region: string | null
-          title: string
-          updated_at: string | null
-          user_id: string
-          views: number | null
-        }
-        Insert: {
-          category: string
-          contact_email?: string | null
-          contact_telegram?: string | null
-          created_at?: string | null
-          description: string
-          funding_range?: string | null
-          id?: string
-          image_urls?: string[] | null
-          region?: string | null
-          title: string
-          updated_at?: string | null
-          user_id: string
-          views?: number | null
-        }
-        Update: {
-          category?: string
-          contact_email?: string | null
-          contact_telegram?: string | null
-          created_at?: string | null
-          description?: string
-          funding_range?: string | null
-          id?: string
-          image_urls?: string[] | null
-          region?: string | null
-          title?: string
-          updated_at?: string | null
-          user_id?: string
-          views?: number | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "projects_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
@@ -105,7 +23,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      app_role: "innovator" | "investor"
+      [_ in never]: never
     }
     CompositeTypes: {
       [_ in never]: never
@@ -232,8 +150,6 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {
-      app_role: ["innovator", "investor"],
-    },
+    Enums: {},
   },
 } as const
