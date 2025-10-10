@@ -198,7 +198,7 @@ const About = () => {
               {/* Dauren */}
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="space-y-4 text-center md:text-right order-2 md:order-1">
-                  <h3 className="text-2xl font-bold">Dauren</h3>
+                  <h3 className="text-2xl font-bold">Dauren Ibragim</h3>
                   <p className="text-primary font-semibold">Operations & Partnerships Lead</p>
                   <p className="text-muted-foreground">
                     Coordinates cross-border partnerships and manages project operations. Focused on 
