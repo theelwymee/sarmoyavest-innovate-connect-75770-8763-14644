@@ -6,36 +6,28 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-main.jpg";
-import logo from "@/assets/sarmoyavest-logo.png";
-
 const Home = () => {
-  const { t } = useLanguage();
-
-  const features = [
-    {
-      icon: Globe,
-      title: t('home.features.globalReach'),
-      description: t('home.features.globalReachDesc'),
-    },
-    {
-      icon: Users,
-      title: t('home.features.community'),
-      description: t('home.features.communityDesc'),
-    },
-    {
-      icon: TrendingUp,
-      title: t('home.features.earlyStage'),
-      description: t('home.features.earlyStageDesc'),
-    },
-    {
-      icon: Shield,
-      title: t('home.features.transparent'),
-      description: t('home.features.transparentDesc'),
-    },
-  ];
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  const {
+    t
+  } = useLanguage();
+  const features = [{
+    icon: Globe,
+    title: t('home.features.globalReach'),
+    description: t('home.features.globalReachDesc')
+  }, {
+    icon: Users,
+    title: t('home.features.community'),
+    description: t('home.features.communityDesc')
+  }, {
+    icon: TrendingUp,
+    title: t('home.features.earlyStage'),
+    description: t('home.features.earlyStageDesc')
+  }, {
+    icon: Shield,
+    title: t('home.features.transparent'),
+    description: t('home.features.transparentDesc')
+  }];
+  return <div className="min-h-screen flex flex-col">
       <Navigation />
       
       <main className="flex-1">
@@ -45,11 +37,8 @@ const Home = () => {
           <div className="container relative py-20 md:py-32">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
-                <img src={logo} alt="Sarmoyavest" className="h-24 md:h-32 mb-6 mx-auto" />
                 <div className="inline-block">
-                  <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                    {t('home.hero.badge')}
-                  </span>
+                  
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                   {t('home.hero.title')}{" "}
@@ -73,11 +62,7 @@ const Home = () => {
               </div>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-3xl" />
-                <img
-                  src={heroImage}
-                  alt="Innovators collaborating"
-                  className="relative rounded-2xl shadow-2xl w-full"
-                />
+                <img src={heroImage} alt="Innovators collaborating" className="relative rounded-2xl shadow-2xl w-full" />
               </div>
             </div>
           </div>
@@ -108,13 +93,11 @@ const Home = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (
-                <Card key={index} className="p-6 hover:shadow-elegant transition-all">
+              {features.map((feature, index) => <Card key={index} className="p-6 hover:shadow-elegant transition-all">
                   <feature.icon className="h-12 w-12 text-primary mb-4" />
                   <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground">{feature.description}</p>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -141,8 +124,6 @@ const Home = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
