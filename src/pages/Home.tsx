@@ -45,7 +45,7 @@ const Home = () => {
           <div className="container relative py-20 md:py-32">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
-                <img src={logo} alt="Sarmoyavest" className="h-16 md:h-20 mb-4" />
+                <img src={logo} alt="Sarmoyavest" className="h-24 md:h-32 mb-6 mx-auto lg:mx-0" />
                 <div className="inline-block">
                   <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
                     {t('home.hero.badge')}
