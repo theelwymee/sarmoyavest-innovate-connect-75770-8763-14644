@@ -3,6 +3,10 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Target, Heart, Lightbulb } from "lucide-react";
 import connectionImage from "@/assets/connection-illustration.jpg";
+import vasliddinImage from "@/assets/team/vasliddin.jpg";
+import asadbekImage from "@/assets/team/asadbek.jpg";
+import adibaImage from "@/assets/team/adiba.jpg";
+import daurenImage from "@/assets/team/dauren.jpg";
 
 const About = () => {
   return (
@@ -117,6 +121,97 @@ const About = () => {
                   We're not just building a platform – we're building a movement that recognizes 
                   and unleashes the potential of innovators everywhere.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="py-20 bg-muted/50">
+          <div className="container">
+            <div className="max-w-5xl mx-auto space-y-4 text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold">Meet the Team</h2>
+              <p className="text-lg text-muted-foreground">
+                A passionate team of young innovators and mentors empowering the next generation of entrepreneurs.
+              </p>
+            </div>
+
+            <div className="max-w-6xl mx-auto space-y-16">
+              {/* Vasliddin Isomiddinov */}
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="flex justify-center md:justify-end">
+                  <img
+                    src={vasliddinImage}
+                    alt="Vasliddin Isomiddinov"
+                    className="w-64 h-64 rounded-full object-cover shadow-lg"
+                  />
+                </div>
+                <div className="space-y-4 text-center md:text-left">
+                  <h3 className="text-2xl font-bold">Vasliddin Isomiddinov</h3>
+                  <p className="text-primary font-semibold">Founder & Director</p>
+                  <p className="text-muted-foreground">
+                    Leads the vision, design, and development of Sarmoyavest. Oversees product direction 
+                    and team coordination. Passionate about innovation and building a bridge between young 
+                    entrepreneurs and investors.
+                  </p>
+                </div>
+              </div>
+
+              {/* Asadbek Ismoilov */}
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4 text-center md:text-right order-2 md:order-1">
+                  <h3 className="text-2xl font-bold">Asadbek Ismoilov</h3>
+                  <p className="text-primary font-semibold">Project Advisor</p>
+                  <p className="text-muted-foreground">
+                    Economics student at HKUST guiding Sarmoyavest's strategic and financial direction. 
+                    Provides mentorship on scaling strategies and economic frameworks.
+                  </p>
+                </div>
+                <div className="flex justify-center md:justify-start order-1 md:order-2">
+                  <img
+                    src={asadbekImage}
+                    alt="Asadbek Ismoilov"
+                    className="w-64 h-64 rounded-full object-cover shadow-lg"
+                  />
+                </div>
+              </div>
+
+              {/* Adiba Isabekova */}
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="flex justify-center md:justify-end">
+                  <img
+                    src={adibaImage}
+                    alt="Adiba Isabekova"
+                    className="w-64 h-64 rounded-full object-cover shadow-lg"
+                  />
+                </div>
+                <div className="space-y-4 text-center md:text-left">
+                  <h3 className="text-2xl font-bold">Adiba Isabekova</h3>
+                  <p className="text-primary font-semibold">Head of Communications</p>
+                  <p className="text-muted-foreground">
+                    Leads brand communication, storytelling, and media presence. Ensures Sarmoyavest's 
+                    message connects clearly and creatively with the public.
+                  </p>
+                </div>
+              </div>
+
+              {/* Dauren */}
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4 text-center md:text-right order-2 md:order-1">
+                  <h3 className="text-2xl font-bold">Dauren</h3>
+                  <p className="text-primary font-semibold">Operations & Partnerships Lead</p>
+                  <p className="text-muted-foreground">
+                    Coordinates cross-border partnerships and manages project operations. Focused on 
+                    building collaborations and ensuring smooth execution.
+                  </p>
+                </div>
+                <div className="flex justify-center md:justify-start order-1 md:order-2">
+                  <img
+                    src={daurenImage}
+                    alt="Dauren"
+                    className="w-64 h-64 rounded-full object-cover shadow-lg"
+                  />
+                </div>
               </div>
             </div>
           </div>
