@@ -129,8 +129,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold mb-1">Location</h3>
                         <p className="text-muted-foreground">
-                          Serving startups globally<br />
-                          Based in Central Asia
+                          Jizzakh, Uzbekistan
                         </p>
                       </div>
                     </div>
