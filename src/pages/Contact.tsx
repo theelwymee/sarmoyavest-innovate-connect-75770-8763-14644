@@ -8,25 +8,25 @@ import { Label } from "@/components/ui/label";
 import { Mail, Linkedin, Twitter, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-    message: "",
+    message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Form validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Missing Information",
         description: "Please fill in all required fields.",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
@@ -34,7 +34,7 @@ const Contact = () => {
     // In a real app, this would send to an API
     toast({
       title: "Message Sent!",
-      description: "We'll get back to you as soon as possible.",
+      description: "We'll get back to you as soon as possible."
     });
 
     // Reset form
@@ -42,12 +42,10 @@ const Contact = () => {
       name: "",
       email: "",
       subject: "",
-      message: "",
+      message: ""
     });
   };
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navigation />
       
       <main className="flex-1">
@@ -73,47 +71,34 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name *</Label>
-                    <Input
-                      id="name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Your full name"
-                      required
-                    />
+                    <Input id="name" value={formData.name} onChange={e => setFormData({
+                    ...formData,
+                    name: e.target.value
+                  })} placeholder="Your full name" required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="email">Email *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="your@email.com"
-                      required
-                    />
+                    <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                    ...formData,
+                    email: e.target.value
+                  })} placeholder="your@email.com" required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
-                    <Input
-                      id="subject"
-                      value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      placeholder="What's this about?"
-                    />
+                    <Input id="subject" value={formData.subject} onChange={e => setFormData({
+                    ...formData,
+                    subject: e.target.value
+                  })} placeholder="What's this about?" />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Message *</Label>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Tell us more..."
-                      rows={6}
-                      required
-                    />
+                    <Textarea id="message" value={formData.message} onChange={e => setFormData({
+                    ...formData,
+                    message: e.target.value
+                  })} placeholder="Tell us more..." rows={6} required />
                   </div>
 
                   <Button type="submit" size="lg" className="w-full shadow-elegant">
@@ -133,12 +118,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
-                        <a
-                          href="mailto:info@sarmoyavest.com"
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          info@sarmoyavest.com
-                        </a>
+                        <a href="mailto:info@sarmoyavest.com" className="text-muted-foreground hover:text-primary transition-colors">info@sarmoyavest.com</a>
                       </div>
                     </div>
 
@@ -160,25 +140,13 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-4">Follow Us</h3>
                   <div className="flex space-x-4">
-                    <a
-                      href="#"
-                      className="p-3 rounded-lg bg-muted hover:bg-primary/10 hover:text-primary transition-all"
-                      aria-label="Email"
-                    >
+                    <a href="#" className="p-3 rounded-lg bg-muted hover:bg-primary/10 hover:text-primary transition-all" aria-label="Email">
                       <Mail className="h-5 w-5" />
                     </a>
-                    <a
-                      href="#"
-                      className="p-3 rounded-lg bg-muted hover:bg-primary/10 hover:text-primary transition-all"
-                      aria-label="LinkedIn"
-                    >
+                    <a href="#" className="p-3 rounded-lg bg-muted hover:bg-primary/10 hover:text-primary transition-all" aria-label="LinkedIn">
                       <Linkedin className="h-5 w-5" />
                     </a>
-                    <a
-                      href="#"
-                      className="p-3 rounded-lg bg-muted hover:bg-primary/10 hover:text-primary transition-all"
-                      aria-label="Twitter"
-                    >
+                    <a href="#" className="p-3 rounded-lg bg-muted hover:bg-primary/10 hover:text-primary transition-all" aria-label="Twitter">
                       <Twitter className="h-5 w-5" />
                     </a>
                   </div>
@@ -233,8 +201,6 @@ const Contact = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
