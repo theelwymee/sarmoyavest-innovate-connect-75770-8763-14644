@@ -4,6 +4,7 @@ import { Menu, X, Globe, LogOut } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useAuth } from "@/contexts/AuthContext";
+import logo from "@/assets/sarmoyavest-logo.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -35,9 +36,7 @@ const Navigation = () => {
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-            Sarmoyavest
-          </span>
+          <img src={logo} alt="Sarmoyavest" className="h-8" />
         </Link>
 
         {/* Desktop Navigation */}
