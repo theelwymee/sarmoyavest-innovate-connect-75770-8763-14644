@@ -37,9 +37,6 @@ const Home = () => {
           <div className="container relative py-20 md:py-32">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
-                <div className="inline-block">
-                  
-                </div>
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                   {t('home.hero.title')}{" "}
                   <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
