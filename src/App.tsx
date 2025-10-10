@@ -12,6 +12,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
 import UploadProject from "./pages/UploadProject";
+import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/upload-project" element={<UploadProject />} />
+              <Route path="/resources" element={<Resources />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
