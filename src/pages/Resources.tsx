@@ -3,27 +3,29 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FileText, Target, Sparkles, Users, GraduationCap } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Resources = () => {
+  const { t } = useLanguage();
   const buildGuides = [
     {
-      title: "How to Write a Clear Problem Statement",
-      description: "Learn to articulate the problem your startup solves in a way that resonates with investors and users.",
+      title: t('resources.guide1Title'),
+      description: t('resources.guide1Desc'),
       icon: FileText,
     },
     {
-      title: "How to Describe Your Solution Effectively",
-      description: "Master the art of presenting your solution clearly, highlighting what makes it unique and valuable.",
+      title: t('resources.guide2Title'),
+      description: t('resources.guide2Desc'),
       icon: Sparkles,
     },
     {
-      title: "Tips to Make Your Idea Stand Out",
-      description: "Discover strategies to differentiate your startup and capture attention in a competitive landscape.",
+      title: t('resources.guide3Title'),
+      description: t('resources.guide3Desc'),
       icon: Target,
     },
     {
-      title: "Understanding Your Target Audience",
-      description: "Identify and analyze your ideal customers to build a product that truly meets their needs.",
+      title: t('resources.guide4Title'),
+      description: t('resources.guide4Desc'),
       icon: Users,
     },
   ];
@@ -37,10 +39,10 @@ const Resources = () => {
         <section className="py-20 px-4">
           <div className="container max-w-6xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Resources
+              {t('resources.title')}
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Learn. Build. Grow — empowering innovators to create impact.
+              {t('resources.subtitle')}
             </p>
           </div>
         </section>
@@ -49,9 +51,9 @@ const Resources = () => {
         <section className="py-16 px-4 bg-muted/30">
           <div className="container max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Build Your Idea</h2>
+              <h2 className="text-3xl font-bold mb-4">{t('resources.buildTitle')}</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Clear, friendly guides to help you prepare and structure your startup submission.
+                {t('resources.buildSubtitle')}
               </p>
             </div>
 
@@ -84,33 +86,31 @@ const Resources = () => {
             <Card className="border-2 border-primary/20 relative overflow-hidden">
               <div className="absolute top-4 right-4">
                 <Badge variant="secondary" className="animate-pulse">
-                  Coming Soon
+                  {t('resources.comingSoon')}
                 </Badge>
               </div>
               <CardHeader className="text-center pb-6">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mx-auto mb-6">
                   <GraduationCap className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-3xl mb-4">Mentorship Program</CardTitle>
+                <CardTitle className="text-3xl mb-4">{t('resources.mentorshipTitle')}</CardTitle>
                 <CardDescription className="text-lg max-w-2xl mx-auto">
-                  We're building a mentorship network to help innovators refine their ideas with expert guidance. 
-                  Connect with mentors from top universities who understand your journey and can provide valuable insights 
-                  to take your startup to the next level.
+                  {t('resources.mentorshipDesc')}
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center pb-8">
                 <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                    <span>One-on-one sessions</span>
+                    <span>{t('resources.oneOnOne')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                    <span>Expert feedback</span>
+                    <span>{t('resources.expertFeedback')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                    <span>Growth strategies</span>
+                    <span>{t('resources.growthStrategies')}</span>
                   </div>
                 </div>
               </CardContent>

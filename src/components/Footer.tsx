@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Mail, Send, Instagram } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className="border-t bg-muted/50">
       <div className="container py-12">
@@ -12,27 +14,27 @@ const Footer = () => {
               Sarmoyavest
             </h3>
             <p className="text-sm text-muted-foreground">
-              Connecting innovators with investors, empowering the next generation of global startups.
+              {t('footer.tagline')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Platform</h4>
+            <h4 className="font-semibold mb-4">{t('footer.platform')}</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About Us
+                  {t('footer.aboutUs')}
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  Services
+                  {t('footer.services')}
                 </Link>
               </li>
               <li>
                 <Link to="/projects" className="text-muted-foreground hover:text-primary transition-colors">
-                  Browse Projects
+                  {t('footer.browseProjects')}
                 </Link>
               </li>
             </ul>
@@ -40,16 +42,16 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
+            <h4 className="font-semibold mb-4">{t('footer.resources')}</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/resources" className="text-muted-foreground hover:text-primary transition-colors">
-                  Resources
+                  {t('footer.resourcesLink')}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact
+                  {t('footer.contact')}
                 </Link>
               </li>
             </ul>
@@ -57,7 +59,7 @@ const Footer = () => {
 
           {/* Connect */}
           <div>
-            <h4 className="font-semibold mb-4">Connect</h4>
+            <h4 className="font-semibold mb-4">{t('footer.connect')}</h4>
             <div className="flex space-x-4">
               <a
                 href="mailto:info@sarmoyavest.com"
@@ -89,7 +91,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Sarmoyavest. All rights reserved.</p>
+          <p>{t('footer.copyright').replace('{year}', new Date().getFullYear().toString())}</p>
         </div>
       </div>
     </footer>

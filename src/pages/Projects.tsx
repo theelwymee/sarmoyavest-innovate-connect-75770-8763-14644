@@ -6,9 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search, MapPin, Mail } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Projects = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const { t } = useLanguage();
 
   // Sample project data - will be replaced with real data from database
   const sampleProjects = [
@@ -50,9 +52,9 @@ const Projects = () => {
         <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold">Discover Startups</h1>
+              <h1 className="text-4xl md:text-5xl font-bold">{t('projects.heroTitle')}</h1>
               <p className="text-xl text-muted-foreground">
-                Browse innovative projects from talented founders across emerging markets
+                {t('projects.heroSubtitle')}
               </p>
             </div>
           </div>
@@ -66,14 +68,14 @@ const Projects = () => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
                 <Input
                   type="text"
-                  placeholder="Search by project name, country, or keyword..."
+                  placeholder={t('projects.searchPlaceholder')}
                   className="pl-10"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
               </div>
               <p className="text-sm text-muted-foreground mt-4 text-center">
-                Showing {sampleProjects.length} projects
+                {t('projects.showing').replace('{count}', sampleProjects.length.toString())}
               </p>
             </div>
           </div>
@@ -108,13 +110,13 @@ const Projects = () => {
                   
                   <div className="pt-6 mt-6 border-t space-y-3">
                     <div className="text-sm">
-                      <span className="text-muted-foreground">Founder: </span>
+                      <span className="text-muted-foreground">{t('projects.founder')} </span>
                       <span className="font-medium">{project.founder}</span>
                     </div>
                     <Button className="w-full" variant="outline" asChild>
                       <a href={`mailto:${project.contact}`}>
                         <Mail className="h-4 w-4 mr-2" />
-                        Contact Founder
+                        {t('projects.contactFounder')}
                       </a>
                     </Button>
                   </div>
@@ -124,13 +126,12 @@ const Projects = () => {
 
             {/* Empty State Message */}
             <div className="mt-12 text-center p-12 bg-muted/50 rounded-lg">
-              <h3 className="text-xl font-semibold mb-2">More Projects Coming Soon</h3>
+              <h3 className="text-xl font-semibold mb-2">{t('projects.comingSoonTitle')}</h3>
               <p className="text-muted-foreground mb-6">
-                This is just a preview. Once you sign up and submit your project, 
-                it will appear here for investors to discover.
+                {t('projects.comingSoonText')}
               </p>
               <Button asChild className="shadow-elegant">
-                <a href="/auth">Submit Your Startup</a>
+                <a href="/auth">{t('projects.submitStartup')}</a>
               </Button>
             </div>
           </div>

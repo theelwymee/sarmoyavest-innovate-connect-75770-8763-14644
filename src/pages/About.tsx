@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Target, Heart, Lightbulb } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import connectionImage from "@/assets/connection-illustration.jpg";
 import vasliddinImage from "@/assets/team/vasliddin.jpg";
 import asadbekImage from "@/assets/team/asadbek.jpg";
@@ -9,6 +10,7 @@ import adibaImage from "@/assets/team/adiba.jpg";
 import daurenImage from "@/assets/team/dauren.jpg";
 
 const About = () => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -18,9 +20,9 @@ const About = () => {
         <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold">About Sarmoyavest</h1>
+              <h1 className="text-4xl md:text-5xl font-bold">{t('about.title')}</h1>
               <p className="text-xl text-muted-foreground">
-                Empowering early-stage founders from developing regions to connect with global opportunities
+                {t('about.subtitle')}
               </p>
             </div>
           </div>
@@ -31,19 +33,15 @@ const About = () => {
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold">Our Story</h2>
+                <h2 className="text-3xl md:text-4xl font-bold">{t('about.story.title')}</h2>
                 <p className="text-muted-foreground">
-                  Sarmoyavest was born from a simple observation: brilliant innovators in Central Asia 
-                  and other developing regions face significant barriers in accessing global capital and mentorship.
+                  {t('about.story.p1')}
                 </p>
                 <p className="text-muted-foreground">
-                  While the world has become increasingly connected, the innovation funding ecosystem remains 
-                  concentrated in traditional hubs. We believe this represents a massive missed opportunity 
-                  for both investors and entrepreneurs.
+                  {t('about.story.p2')}
                 </p>
                 <p className="text-muted-foreground">
-                  Our platform breaks down these barriers by providing a transparent, accessible space where 
-                  talent meets opportunity, regardless of geographic boundaries.
+                  {t('about.story.p3')}
                 </p>
               </div>
               <div className="relative">
@@ -60,16 +58,15 @@ const About = () => {
         {/* Values Section */}
         <section className="py-20 bg-muted/50">
           <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Values</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{t('about.values.title')}</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="p-8 text-center space-y-4">
                 <div className="inline-flex p-4 rounded-full bg-primary/10">
                   <Target className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold">Accessibility</h3>
+                <h3 className="text-xl font-semibold">{t('about.values.accessibility')}</h3>
                 <p className="text-muted-foreground">
-                  Making innovation funding accessible to founders everywhere, 
-                  regardless of their location or network.
+                  {t('about.values.accessibilityDesc')}
                 </p>
               </Card>
               
@@ -77,10 +74,9 @@ const About = () => {
                 <div className="inline-flex p-4 rounded-full bg-secondary/10">
                   <Heart className="h-8 w-8 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold">Transparency</h3>
+                <h3 className="text-xl font-semibold">{t('about.values.transparency')}</h3>
                 <p className="text-muted-foreground">
-                  Building trust through clear processes, honest communication, 
-                  and secure interactions.
+                  {t('about.values.transparencyDesc')}
                 </p>
               </Card>
               
@@ -88,10 +84,9 @@ const About = () => {
                 <div className="inline-flex p-4 rounded-full bg-accent/10">
                   <Lightbulb className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-semibold">Innovation</h3>
+                <h3 className="text-xl font-semibold">{t('about.values.innovation')}</h3>
                 <p className="text-muted-foreground">
-                  Championing bold ideas and supporting entrepreneurs who dare 
-                  to think differently.
+                  {t('about.values.innovationDesc')}
                 </p>
               </Card>
             </div>
@@ -102,24 +97,22 @@ const About = () => {
         <section className="py-20">
           <div className="container">
             <div className="max-w-3xl mx-auto space-y-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-center">Our Vision</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center">{t('about.vision.title')}</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  We envision a world where innovation funding is truly borderless, where the quality 
-                  of an idea matters more than the founder's postal code.
+                  {t('about.vision.p1')}
                 </p>
                 <p>
-                  Through Sarmoyavest, we're creating an ecosystem where:
+                  {t('about.vision.p2')}
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Talented founders from any region can showcase their innovations</li>
-                  <li>Investors discover untapped opportunities in emerging markets</li>
-                  <li>Mentors share their expertise with the next generation of entrepreneurs</li>
-                  <li>Communities collaborate across borders to solve global challenges</li>
+                  <li>{t('about.vision.li1')}</li>
+                  <li>{t('about.vision.li2')}</li>
+                  <li>{t('about.vision.li3')}</li>
+                  <li>{t('about.vision.li4')}</li>
                 </ul>
                 <p>
-                  We're not just building a platform – we're building a movement that recognizes 
-                  and unleashes the potential of innovators everywhere.
+                  {t('about.vision.p3')}
                 </p>
               </div>
             </div>
@@ -130,9 +123,9 @@ const About = () => {
         <section className="py-20 bg-muted/50">
           <div className="container">
             <div className="max-w-5xl mx-auto space-y-4 text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold">Meet the Team</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t('about.team.title')}</h2>
               <p className="text-lg text-muted-foreground">
-                A passionate team of young innovators and mentors empowering the next generation of entrepreneurs.
+                {t('about.team.subtitle')}
               </p>
             </div>
 
@@ -142,17 +135,15 @@ const About = () => {
                 <div className="flex justify-center md:justify-end">
                   <img
                     src={vasliddinImage}
-                    alt="Vasliddin Isomiddinov"
+                    alt={t('about.team.vasliddin')}
                     className="w-64 h-64 rounded-full object-cover shadow-lg"
                   />
                 </div>
                 <div className="space-y-4 text-center md:text-left">
-                  <h3 className="text-2xl font-bold">Vasliddin Isomiddinov</h3>
-                  <p className="text-primary font-semibold">Founder & Director</p>
+                  <h3 className="text-2xl font-bold">{t('about.team.vasliddin')}</h3>
+                  <p className="text-primary font-semibold">{t('about.team.vasliddinRole')}</p>
                   <p className="text-muted-foreground">
-                    Leads the vision, design, and development of Sarmoyavest. Oversees product direction 
-                    and team coordination. Passionate about innovation and building a bridge between young 
-                    entrepreneurs and investors.
+                    {t('about.team.vasliddinDesc')}
                   </p>
                 </div>
               </div>
@@ -160,17 +151,16 @@ const About = () => {
               {/* Asadbek Ismoilov */}
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="space-y-4 text-center md:text-right order-2 md:order-1">
-                  <h3 className="text-2xl font-bold">Asadbek Ismoilov</h3>
-                  <p className="text-primary font-semibold">Project Advisor</p>
+                  <h3 className="text-2xl font-bold">{t('about.team.asadbek')}</h3>
+                  <p className="text-primary font-semibold">{t('about.team.asadbekRole')}</p>
                   <p className="text-muted-foreground">
-                    Economics student at HKUST guiding Sarmoyavest's strategic and financial direction. 
-                    Provides mentorship on scaling strategies and economic frameworks.
+                    {t('about.team.asadbekDesc')}
                   </p>
                 </div>
                 <div className="flex justify-center md:justify-start order-1 md:order-2">
                   <img
                     src={asadbekImage}
-                    alt="Asadbek Ismoilov"
+                    alt={t('about.team.asadbek')}
                     className="w-64 h-64 rounded-full object-cover shadow-lg"
                   />
                 </div>
@@ -181,16 +171,15 @@ const About = () => {
                 <div className="flex justify-center md:justify-end">
                   <img
                     src={adibaImage}
-                    alt="Adiba Isabekova"
+                    alt={t('about.team.adiba')}
                     className="w-64 h-64 rounded-full object-cover shadow-lg"
                   />
                 </div>
                 <div className="space-y-4 text-center md:text-left">
-                  <h3 className="text-2xl font-bold">Adiba Isabekova</h3>
-                  <p className="text-primary font-semibold">Head of Communications</p>
+                  <h3 className="text-2xl font-bold">{t('about.team.adiba')}</h3>
+                  <p className="text-primary font-semibold">{t('about.team.adibaRole')}</p>
                   <p className="text-muted-foreground">
-                    Leads brand communication, storytelling, and media presence. Ensures Sarmoyavest's 
-                    message connects clearly and creatively with the public.
+                    {t('about.team.adibaDesc')}
                   </p>
                 </div>
               </div>
@@ -198,17 +187,16 @@ const About = () => {
               {/* Dauren */}
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="space-y-4 text-center md:text-right order-2 md:order-1">
-                  <h3 className="text-2xl font-bold">Dauren Ibragim</h3>
-                  <p className="text-primary font-semibold">Operations & Partnerships Lead</p>
+                  <h3 className="text-2xl font-bold">{t('about.team.dauren')}</h3>
+                  <p className="text-primary font-semibold">{t('about.team.daurenRole')}</p>
                   <p className="text-muted-foreground">
-                    Coordinates cross-border partnerships and manages project operations. Focused on 
-                    building collaborations and ensuring smooth execution.
+                    {t('about.team.daurenDesc')}
                   </p>
                 </div>
                 <div className="flex justify-center md:justify-start order-1 md:order-2">
                   <img
                     src={daurenImage}
-                    alt="Dauren"
+                    alt={t('about.team.dauren')}
                     className="w-64 h-64 rounded-full object-cover shadow-lg"
                   />
                 </div>
