@@ -161,7 +161,7 @@ const About = () => {
                   <img
                     src={asadbekImage}
                     alt={t('about.team.asadbek')}
-                    className="w-64 h-64 rounded-full object-cover shadow-lg"
+                    className="w-64 h-64 rounded-full object-cover object-center shadow-lg"
                   />
                 </div>
               </div>
