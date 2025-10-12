@@ -8,11 +8,11 @@ import vasliddinImage from "@/assets/team/vasliddin.jpg";
 import asadbekImage from "@/assets/team/asadbek.jpg";
 import adibaImage from "@/assets/team/adiba.jpg";
 import daurenImage from "@/assets/team/dauren.jpg";
-
 const About = () => {
-  const { t } = useLanguage();
-  return (
-    <div className="min-h-screen flex flex-col">
+  const {
+    t
+  } = useLanguage();
+  return <div className="min-h-screen flex flex-col">
       <Navigation />
       
       <main className="flex-1">
@@ -45,11 +45,7 @@ const About = () => {
                 </p>
               </div>
               <div className="relative">
-                <img
-                  src={connectionImage}
-                  alt="Global connections"
-                  className="rounded-2xl shadow-2xl"
-                />
+                <img src={connectionImage} alt="Global connections" className="rounded-2xl shadow-2xl" />
               </div>
             </div>
           </div>
@@ -133,11 +129,7 @@ const About = () => {
               {/* Vasliddin Isomiddinov */}
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="flex justify-center md:justify-end">
-                  <img
-                    src={vasliddinImage}
-                    alt={t('about.team.vasliddin')}
-                    className="w-64 h-64 rounded-full object-cover shadow-lg"
-                  />
+                  
                 </div>
                 <div className="space-y-4 text-center md:text-left">
                   <h3 className="text-2xl font-bold">{t('about.team.vasliddin')}</h3>
@@ -158,22 +150,14 @@ const About = () => {
                   </p>
                 </div>
                 <div className="flex justify-center md:justify-start order-1 md:order-2">
-                  <img
-                    src={asadbekImage}
-                    alt={t('about.team.asadbek')}
-                    className="w-64 h-64 rounded-full object-cover object-center shadow-lg"
-                  />
+                  <img src={asadbekImage} alt={t('about.team.asadbek')} className="w-64 h-64 rounded-full object-cover object-center shadow-lg" />
                 </div>
               </div>
 
               {/* Adiba Isabekova */}
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="flex justify-center md:justify-end">
-                  <img
-                    src={adibaImage}
-                    alt={t('about.team.adiba')}
-                    className="w-64 h-64 rounded-full object-cover object-center shadow-lg"
-                  />
+                  <img src={adibaImage} alt={t('about.team.adiba')} className="w-64 h-64 rounded-full object-cover object-center shadow-lg" />
                 </div>
                 <div className="space-y-4 text-center md:text-left">
                   <h3 className="text-2xl font-bold">{t('about.team.adiba')}</h3>
@@ -194,11 +178,7 @@ const About = () => {
                   </p>
                 </div>
                 <div className="flex justify-center md:justify-start order-1 md:order-2">
-                  <img
-                    src={daurenImage}
-                    alt={t('about.team.dauren')}
-                    className="w-64 h-64 rounded-full object-cover shadow-lg"
-                  />
+                  <img src={daurenImage} alt={t('about.team.dauren')} className="w-64 h-64 rounded-full object-cover shadow-lg" />
                 </div>
               </div>
             </div>
@@ -207,8 +187,6 @@ const About = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
