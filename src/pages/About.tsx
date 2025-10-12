@@ -7,6 +7,7 @@ import connectionImage from "@/assets/connection-illustration.jpg";
 import asadbekImage from "@/assets/team/asadbek.jpg";
 import adibaImage from "@/assets/team/adiba.jpg";
 import daurenImage from "@/assets/team/dauren.jpg";
+import vasliddinImage from "@/assets/team/vasliddin.jpg";
 const About = () => {
   const { t } = useLanguage();
   return (
