@@ -136,7 +136,7 @@ const About = () => {
                   <img
                     src={vasliddinImage}
                     alt={t('about.team.vasliddin')}
-                    className="w-64 h-64 rounded-full object-cover shadow-lg"
+                    className="w-64 h-64 rounded-full object-cover object-center shadow-lg"
                   />
                 </div>
                 <div className="space-y-4 text-center md:text-left">
@@ -161,7 +161,7 @@ const About = () => {
                   <img
                     src={asadbekImage}
                     alt={t('about.team.asadbek')}
-                    className="w-64 h-64 rounded-full object-cover object-center shadow-lg"
+                    className="w-64 h-64 rounded-full object-cover shadow-lg"
                   />
                 </div>
               </div>
