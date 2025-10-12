@@ -128,9 +128,9 @@ const About = () => {
             <div className="max-w-6xl mx-auto space-y-16">
               {/* Vasliddin Isomiddinov */}
               <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="flex justify-center md:justify-end">
-                  
-                </div>
+              <div className="flex justify-center md:justify-end">
+                <img src={vasliddinImage} alt={t('about.team.vasliddin')} className="w-64 h-64 rounded-full object-cover object-center shadow-lg" />
+              </div>
                 <div className="space-y-4 text-center md:text-left">
                   <h3 className="text-2xl font-bold">{t('about.team.vasliddin')}</h3>
                   <p className="text-primary font-semibold">{t('about.team.vasliddinRole')}</p>
