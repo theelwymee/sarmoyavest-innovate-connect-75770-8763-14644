@@ -172,7 +172,7 @@ const About = () => {
                   <img
                     src={adibaImage}
                     alt={t('about.team.adiba')}
-                    className="w-64 h-64 rounded-full object-cover shadow-lg"
+                    className="w-64 h-64 rounded-full object-cover object-center shadow-lg"
                   />
                 </div>
                 <div className="space-y-4 text-center md:text-left">
