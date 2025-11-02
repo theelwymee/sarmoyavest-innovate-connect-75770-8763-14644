@@ -20,7 +20,7 @@ const Projects = () => {
       country: "Uzbekistan",
       description: "A smart solution designed to reduce traffic congestion by integrating artificial intelligence into traffic lights and road monitoring. The system analyzes real-time vehicle and pedestrian data to optimize signal timing, minimize waiting time, and improve overall traffic flow efficiency.",
       founder: "Og'abek Saydullayev",
-      contact: "anvar@ecotech.uz",
+      contact: "Ulugbekovich2007@gmail.com",
       tags: ["AI", "Community", "Comfortability"],
     },
   ];
