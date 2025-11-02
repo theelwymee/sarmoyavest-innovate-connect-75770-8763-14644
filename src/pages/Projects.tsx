@@ -19,7 +19,7 @@ const Projects = () => {
       title: "Intelligent Traffic System",
       country: "Uzbekistan",
       description: "A smart solution designed to reduce traffic congestion by integrating artificial intelligence into traffic lights and road monitoring. The system analyzes real-time vehicle and pedestrian data to optimize signal timing, minimize waiting time, and improve overall traffic flow efficiency.",
-      founder: "Anvar Karimov",
+      founder: "Og'abek Saydullayev",
       contact: "anvar@ecotech.uz",
       tags: ["AI", "Community", "Comfortability"],
     },
