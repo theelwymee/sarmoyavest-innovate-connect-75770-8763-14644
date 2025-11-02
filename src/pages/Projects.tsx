@@ -18,7 +18,7 @@ const Projects = () => {
       id: 1,
       title: "Intelligent Traffic System",
       country: "Uzbekistan",
-      description: "Developing sustainable technology for water purification in rural areas. Our innovative approach combines solar power with advanced filtration systems.",
+      description: "A smart solution designed to reduce traffic congestion by integrating artificial intelligence into traffic lights and road monitoring. The system analyzes real-time vehicle and pedestrian data to optimize signal timing, minimize waiting time, and improve overall traffic flow efficiency.",
       founder: "Anvar Karimov",
       contact: "anvar@ecotech.uz",
       tags: ["CleanTech", "Sustainability", "Pre-seed"],
