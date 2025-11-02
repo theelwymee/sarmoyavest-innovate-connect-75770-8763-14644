@@ -23,24 +23,6 @@ const Projects = () => {
       contact: "anvar@ecotech.uz",
       tags: ["CleanTech", "Sustainability", "Pre-seed"],
     },
-    {
-      id: 2,
-      title: "FinConnect",
-      country: "Kazakhstan",
-      description: "Mobile-first financial services platform for underbanked communities. Making banking accessible through simple smartphone apps.",
-      founder: "Aisha Nurlan",
-      contact: "aisha@finconnect.kz",
-      tags: ["FinTech", "Mobile", "Seed"],
-    },
-    {
-      id: 3,
-      title: "AgriSmart",
-      country: "Kyrgyzstan",
-      description: "IoT-based smart farming solutions to increase crop yields. Using sensors and AI to help farmers make data-driven decisions.",
-      founder: "Bektur Asanov",
-      contact: "bektur@agrismart.kg",
-      tags: ["AgriTech", "IoT", "Pre-seed"],
-    },
   ];
 
   return (
