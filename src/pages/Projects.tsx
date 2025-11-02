@@ -16,7 +16,7 @@ const Projects = () => {
   const sampleProjects = [
     {
       id: 1,
-      title: "EcoTech Solutions",
+      title: "Intelligent Traffic System",
       country: "Uzbekistan",
       description: "Developing sustainable technology for water purification in rural areas. Our innovative approach combines solar power with advanced filtration systems.",
       founder: "Anvar Karimov",
