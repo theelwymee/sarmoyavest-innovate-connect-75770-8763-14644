@@ -22,6 +22,7 @@ const translations = {
     'nav.signup': 'Sign Up',
     'nav.logout': 'Logout',
     'nav.uploadProject': 'Upload Project',
+    'nav.events': 'Events',
     
     // Home Page
     'home.hero.badge': 'Connecting Innovators Globally',
@@ -195,6 +196,15 @@ const translations = {
     'projects.comingSoonTitle': 'More Projects Coming Soon',
     'projects.comingSoonText': 'This is just a preview. Once you sign up and submit your project, it will appear here for investors to discover.',
     'projects.submitStartup': 'Submit Your Startup',
+
+    // Events Page
+    'events.title': 'Events',
+    'events.subtitle': 'Meet founders, investors, and mentors through curated Sarmoyavest events.',
+    'events.badge': 'Upcoming',
+    'events.featuredTitle': 'Sarmoyavest Community Meetup',
+    'events.featuredDescription': 'We are preparing our first community event to connect innovators and investors in one space.',
+    'events.datePlaceholder': 'Date to be announced',
+    'events.locationPlaceholder': 'Location to be announced',
     
     // Resources Page
     'resources.title': 'Resources',
@@ -229,6 +239,7 @@ const translations = {
     'nav.signup': 'Регистрация',
     'nav.logout': 'Выйти',
     'nav.uploadProject': 'Загрузить проект',
+    'nav.events': 'События',
     
     // Home Page
     'home.hero.badge': 'Соединяем новаторов по всему миру',
@@ -402,6 +413,15 @@ const translations = {
     'projects.comingSoonTitle': 'Скоро появятся новые проекты',
     'projects.comingSoonText': 'Это всего лишь предварительный просмотр. После регистрации и отправки вашего проекта, он появится здесь для инвесторов.',
     'projects.submitStartup': 'Подать заявку на стартап',
+
+    // Events Page
+    'events.title': 'События',
+    'events.subtitle': 'Встречайтесь с основателями, инвесторами и менторами на мероприятиях Sarmoyavest.',
+    'events.badge': 'Скоро',
+    'events.featuredTitle': 'Community Meetup от Sarmoyavest',
+    'events.featuredDescription': 'Мы готовим первое комьюнити-мероприятие, чтобы объединить новаторов и инвесторов в одном пространстве.',
+    'events.datePlaceholder': 'Дата будет объявлена',
+    'events.locationPlaceholder': 'Место будет объявлено',
     
     // Resources Page
     'resources.title': 'Ресурсы',

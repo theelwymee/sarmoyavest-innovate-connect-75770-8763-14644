@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Advantages from "./pages/Advantages";
 import Projects from "./pages/Projects";
+import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
 import UploadProject from "./pages/UploadProject";
@@ -30,6 +31,7 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/advantages" element={<Advantages />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/events" element={<Events />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/upload-project" element={<UploadProject />} />
