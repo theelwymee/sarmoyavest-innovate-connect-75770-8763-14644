@@ -246,6 +246,7 @@ const translations = {
     'nav.projects': 'Проекты',
     'nav.contact': 'Контакты',
     'nav.advantages': 'Преимущества',
+    'nav.events': 'Мероприятия',
     'nav.login': 'Войти',
     'nav.signup': 'Регистрация',
     'nav.logout': 'Выйти',
