@@ -444,6 +444,27 @@ const translations = {
     'resources.oneOnOne': 'Индивидуальные сессии',
     'resources.expertFeedback': 'Экспертная обратная связь',
     'resources.growthStrategies': 'Стратегии роста',
+
+    // Events
+    'events.badge': 'Мероприятия и вехи',
+    'events.heroTitle': 'Наши мероприятия',
+    'events.heroSubtitle': 'Празднуем достижения, делимся знаниями и строим сообщество через значимые мероприятия.',
+    'events.featured': 'Главное мероприятие',
+    'events.firstEvent.title': 'Наше первое мероприятие',
+    'events.firstEvent.subtitle': 'Запуск нашей инициативы с первой сессией приглашенного спикера',
+    'events.whatHappened.title': 'Что произошло',
+    'events.whatHappened.desc': '[Напишите описание мероприятия здесь — опишите, как было организовано мероприятие, что пережила аудитория, общую атмосферу, ключевые моменты и выводы.]',
+    'events.guestSpeaker.title': 'Приглашенный спикер',
+    'events.guestSpeaker.name': '[Имя спикера]',
+    'events.guestSpeaker.role': '[Роль / Должность спикера]',
+    'events.guestSpeaker.bio': '[Добавьте биографию спикера здесь — расскажите, кто спикер, его опыт, экспертиза и почему он был приглашен.]',
+    'events.gallery.title': 'Галерея мероприятия',
+    'events.gallery.photo1': 'Загрузить фото 1',
+    'events.gallery.photo2': 'Загрузить фото 2',
+    'events.gallery.photo3': 'Загрузить фото 3',
+    'events.gallery.photo4': 'Загрузить фото 4',
+    'events.whyItMattered.title': 'Почему это важно',
+    'events.whyItMattered.desc': '[Объясните, почему это первое мероприятие было важно для вашей организации и сообщества — какое влияние оно оказало и как подготовило почву для будущих мероприятий.]',
   },
 };
 
