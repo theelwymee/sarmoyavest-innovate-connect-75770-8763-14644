@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Users, Mic2, Image, Star, Clock, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import asadbekSpeaker from "@/assets/team/asadbek-speaker.png";
 
 const Events = () => {
   const { t } = useLanguage();
@@ -150,8 +151,8 @@ const Events = () => {
                   <div className="flex flex-col md:flex-row gap-8 items-start">
                     {/* Speaker Avatar */}
                     <div className="relative flex-shrink-0">
-                      <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-primary/10 to-primary-glow/10 flex items-center justify-center border-2 border-primary/15 shadow-lg">
-                        <Image className="h-10 w-10 text-primary/30" />
+                      <div className="w-32 h-32 rounded-2xl overflow-hidden border-2 border-primary/15 shadow-lg">
+                        <img src={asadbekSpeaker} alt="Asadbek Ismoilov" className="w-full h-full object-cover" />
                       </div>
                       <div className="absolute -bottom-2 -right-2 p-1.5 bg-primary rounded-lg shadow-md">
                         <Star className="h-3.5 w-3.5 text-primary-foreground" />
