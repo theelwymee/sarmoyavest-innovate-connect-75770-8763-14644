@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Users, Mic2, Image, Star, Clock, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import asadbekSpeaker from "@/assets/team/asadbek-speaker.png";
+import eventStageImage from "@/assets/events/eventpic.jpg";
+import eventPosterImage from "@/assets/events/forwebsite.jpg";
+import eventGroupImage from "@/assets/events/eventpic2.jpg";
 
 const Events = () => {
   const { t } = useLanguage();
@@ -183,16 +186,15 @@ const Events = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:grid-rows-2">
                   {/* Large featured image */}
                   <div className="md:row-span-2 group">
-                    <div className="h-full min-h-[280px] md:min-h-[400px] rounded-2xl bg-gradient-to-br from-muted/60 to-muted/30 border-2 border-dashed border-muted-foreground/15 hover:border-primary/25 transition-all duration-300 flex flex-col items-center justify-center gap-4 p-8 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/[0.03] to-transparent" />
-                      <div className="relative z-10 text-center space-y-3">
-                        <div className="p-4 bg-muted rounded-xl group-hover:bg-primary/10 transition-colors mx-auto w-fit">
-                          <Image className="h-10 w-10 text-muted-foreground/30 group-hover:text-primary/40 transition-colors" />
-                        </div>
-                        <p className="text-sm text-muted-foreground/50 font-medium">
-                          {t('events.gallery.photo1')}
-                        </p>
-                        <Badge variant="outline" className="text-xs text-muted-foreground/40">
+                    <div className="h-full min-h-[280px] md:min-h-[400px] rounded-2xl overflow-hidden shadow-lg relative">
+                      <img
+                        src={eventStageImage}
+                        alt={t('events.gallery.photo1')}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                      <div className="absolute left-4 bottom-4 flex items-center gap-2">
+                        <Badge variant="secondary" className="bg-background/90 text-foreground">
                           {t('events.gallery.featured')}
                         </Badge>
                       </div>
@@ -200,36 +202,30 @@ const Events = () => {
                   </div>
                   {/* Supporting image 1 */}
                   <div className="group">
-                    <div className="h-full min-h-[180px] rounded-2xl bg-gradient-to-br from-muted/50 to-muted/20 border-2 border-dashed border-muted-foreground/15 hover:border-primary/25 transition-all duration-300 flex flex-col items-center justify-center gap-3 p-6 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent" />
-                      <div className="relative z-10 text-center space-y-2">
-                        <div className="p-3 bg-muted rounded-lg group-hover:bg-primary/10 transition-colors mx-auto w-fit">
-                          <Image className="h-7 w-7 text-muted-foreground/30 group-hover:text-primary/40 transition-colors" />
-                        </div>
-                        <p className="text-sm text-muted-foreground/50 font-medium">
-                          {t('events.gallery.photo2')}
-                        </p>
-                      </div>
+                    <div className="h-full min-h-[180px] rounded-2xl overflow-hidden shadow-lg relative">
+                      <img
+                        src={eventPosterImage}
+                        alt={t('events.gallery.photo2')}
+                        className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                     </div>
                   </div>
                   {/* Supporting image 2 */}
                   <div className="group">
-                    <div className="h-full min-h-[180px] rounded-2xl bg-gradient-to-br from-muted/40 to-muted/20 border-2 border-dashed border-muted-foreground/15 hover:border-primary/25 transition-all duration-300 flex flex-col items-center justify-center gap-3 p-6 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-tl from-primary-glow/[0.03] to-transparent" />
-                      <div className="relative z-10 text-center space-y-2">
-                        <div className="p-3 bg-muted rounded-lg group-hover:bg-primary/10 transition-colors mx-auto w-fit">
-                          <Image className="h-7 w-7 text-muted-foreground/30 group-hover:text-primary/40 transition-colors" />
-                        </div>
-                        <p className="text-sm text-muted-foreground/50 font-medium">
-                          {t('events.gallery.photo3')}
-                        </p>
-                      </div>
+                    <div className="h-full min-h-[180px] rounded-2xl overflow-hidden shadow-lg relative">
+                      <img
+                        src={eventGroupImage}
+                        alt={t('events.gallery.photo3')}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Why It Mattered */}
+              {/* Key Insights & Takeaways */}
               <Card className="overflow-hidden border-0 shadow-lg">
                 <div className="bg-gradient-to-r from-primary/5 to-transparent p-1" />
                 <CardContent className="p-8">
@@ -237,11 +233,16 @@ const Events = () => {
                     <div className="p-2 bg-primary/10 rounded-lg">
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-semibold">{t('events.whyItMattered.title')}</h3>
+                    <h3 className="text-2xl font-semibold">Key Insights &amp; Takeaways</h3>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed text-base">
-                    {t('events.whyItMattered.desc')}
-                  </p>
+                  <div className="space-y-4 text-muted-foreground leading-relaxed text-base">
+                    <p>
+                      It demonstrated that even a small, committed group can create meaningful discussions and begin shaping a culture of informed financial decision-making.
+                    </p>
+                    <p>
+                      The success of this inaugural session sets the stage for future events, including larger lectures, guest speaker sessions, and expanded participation.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
