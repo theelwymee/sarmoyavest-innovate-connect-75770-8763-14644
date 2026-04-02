@@ -188,7 +188,7 @@ const Events = () => {
                   <div className="md:row-span-2 group">
                     <div className="h-full min-h-[280px] md:min-h-[400px] rounded-2xl overflow-hidden shadow-lg relative">
                       <img
-                        src={eventStageImage}
+                        src={eventGroupImage}
                         alt={t('events.gallery.photo1')}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                       />
@@ -215,7 +215,7 @@ const Events = () => {
                   <div className="group">
                     <div className="h-full min-h-[180px] rounded-2xl overflow-hidden shadow-lg relative">
                       <img
-                        src={eventGroupImage}
+                        src={eventStageImage}
                         alt={t('events.gallery.photo3')}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                       />
