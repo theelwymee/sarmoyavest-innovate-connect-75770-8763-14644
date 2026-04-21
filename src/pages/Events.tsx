@@ -110,7 +110,7 @@ const Events = () => {
                 <h2 className="text-2xl md:text-3xl font-bold">{t('events.past.heading')}</h2>
               </div>
               <Badge variant="outline" className="text-muted-foreground">
-                1 {t('events.past.eventCount')}
+                {totalEvents} {t('events.past.eventCount')}
               </Badge>
             </div>
 
