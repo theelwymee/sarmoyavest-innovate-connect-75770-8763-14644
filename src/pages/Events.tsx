@@ -257,6 +257,30 @@ const Events = () => {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Event Navigation */}
+              <div className="flex items-center justify-between gap-4 pt-4 border-t border-border">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={goToPrev}
+                  className="gap-2"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Previous Event
+                </Button>
+                <span className="text-sm text-muted-foreground font-medium">
+                  Event {currentEvent + 1} of {totalEvents}
+                </span>
+                <Button
+                  size="lg"
+                  onClick={goToNext}
+                  className="gap-2 shadow-md"
+                >
+                  Next Event
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </div>
         </section>
