@@ -3,7 +3,8 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Users, Mic2, Image, Star, Clock, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { Calendar, MapPin, Users, Mic2, Image, Star, Clock, ArrowRight, ArrowLeft, Sparkles, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import asadbekSpeaker from "@/assets/team/asadbek-speaker.png";
 import eventStageImage from "@/assets/events/eventpic.jpg";
@@ -12,6 +13,17 @@ import eventGroupImage from "@/assets/events/eventpic2.jpg";
 
 const Events = () => {
   const { t } = useLanguage();
+  const totalEvents = 2;
+  const [currentEvent, setCurrentEvent] = useState(0);
+
+  const goToNext = () => {
+    setCurrentEvent((prev) => (prev + 1) % totalEvents);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  const goToPrev = () => {
+    setCurrentEvent((prev) => (prev - 1 + totalEvents) % totalEvents);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
