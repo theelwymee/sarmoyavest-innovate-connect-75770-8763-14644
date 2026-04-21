@@ -3,7 +3,8 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Users, Mic2, Image, Star, Clock, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { Calendar, MapPin, Users, Mic2, Image, Star, Clock, ArrowRight, ArrowLeft, Sparkles, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import asadbekSpeaker from "@/assets/team/asadbek-speaker.png";
 import eventStageImage from "@/assets/events/eventpic.jpg";
@@ -12,6 +13,17 @@ import eventGroupImage from "@/assets/events/eventpic2.jpg";
 
 const Events = () => {
   const { t } = useLanguage();
+  const totalEvents = 2;
+  const [currentEvent, setCurrentEvent] = useState(0);
+
+  const goToNext = () => {
+    setCurrentEvent((prev) => (prev + 1) % totalEvents);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  const goToPrev = () => {
+    setCurrentEvent((prev) => (prev - 1 + totalEvents) % totalEvents);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -98,7 +110,7 @@ const Events = () => {
                 <h2 className="text-2xl md:text-3xl font-bold">{t('events.past.heading')}</h2>
               </div>
               <Badge variant="outline" className="text-muted-foreground">
-                1 {t('events.past.eventCount')}
+                {totalEvents} {t('events.past.eventCount')}
               </Badge>
             </div>
 
@@ -245,6 +257,30 @@ const Events = () => {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Event Navigation */}
+              <div className="flex items-center justify-between gap-4 pt-4 border-t border-border">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={goToPrev}
+                  className="gap-2"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Previous Event
+                </Button>
+                <span className="text-sm text-muted-foreground font-medium">
+                  Event {currentEvent + 1} of {totalEvents}
+                </span>
+                <Button
+                  size="lg"
+                  onClick={goToNext}
+                  className="gap-2 shadow-md"
+                >
+                  Next Event
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </div>
         </section>
