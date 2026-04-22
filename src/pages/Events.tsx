@@ -114,7 +114,8 @@ const Events = () => {
               </Badge>
             </div>
 
-            {/* First Past Event */}
+            {/* Past Event — switches based on currentEvent */}
+            {currentEvent === 0 ? (
             <div className="space-y-8">
               {/* Event Header Card */}
               <Card className="overflow-hidden border-0 shadow-lg">
@@ -282,6 +283,118 @@ const Events = () => {
                 </Button>
               </div>
             </div>
+            ) : (
+            <div className="space-y-8">
+              {/* Event Header Card */}
+              <Card className="overflow-hidden border-0 shadow-lg">
+                <div className="bg-gradient-to-r from-primary/10 to-primary-glow/10 p-1" />
+                <CardContent className="p-8">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                    <Badge variant="secondary" className="w-fit">
+                      <CheckCircle2 className="h-3 w-3 mr-1.5" />
+                      {t('events.past.completedBadge')}
+                    </Badge>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Calendar className="h-3.5 w-3.5" />
+                      February 2025
+                    </div>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2">From Idea to Impact: Solving Urban Traffic in Tashkent</h3>
+                  <p className="text-lg text-muted-foreground">An interactive "From Paper to Practice" session</p>
+                </CardContent>
+              </Card>
+
+              {/* Event Overview */}
+              <Card className="overflow-hidden border-0 shadow-lg">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Sparkles className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-semibold">Event Overview</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-base">
+                    This session was designed as an interactive "From Paper to Practice" experience, where participants explored how economic thinking can be applied to real-world challenges. Using traffic congestion in Tashkent as a case study, the session focused on evaluating practical solutions not only from a theoretical perspective, but also through the lens of feasibility, investment potential, and real-life implementation.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* What Happened */}
+              <Card className="overflow-hidden border-0 shadow-lg">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Users className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-semibold">What Happened</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-base">
+                    Attendees were divided into groups, with each group assigned to analyze and defend one solution. After structured discussions, each group presented their arguments, focusing on effectiveness, cost, scalability, and potential challenges. The session concluded with an open debate, where participants evaluated which solution would be most viable in the context of Tashkent.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Event Gallery — Placeholder */}
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Image className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-semibold">Event Gallery</h3>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="aspect-[4/3] rounded-2xl border-2 border-dashed border-primary/20 bg-primary/[0.03] flex items-center justify-center">
+                      <div className="text-center space-y-2">
+                        <Image className="h-8 w-8 text-primary/30 mx-auto" />
+                        <p className="text-xs text-muted-foreground/60 font-medium">[Upload event photo]</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Impact */}
+              <Card className="overflow-hidden border-0 shadow-lg">
+                <div className="bg-gradient-to-r from-primary/5 to-transparent p-1" />
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <MapPin className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-semibold">Impact</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-base">
+                    This session marked a shift toward more interactive and application-based learning within Sarmoyavest. By combining economic theory with real-world problem-solving, participants were able to think critically, engage in meaningful discussions, and approach challenges from both entrepreneurial and analytical perspectives.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Event Navigation */}
+              <div className="flex items-center justify-between gap-4 pt-4 border-t border-border">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={goToPrev}
+                  className="gap-2"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Previous Event
+                </Button>
+                <span className="text-sm text-muted-foreground font-medium">
+                  Event {currentEvent + 1} of {totalEvents}
+                </span>
+                <Button
+                  size="lg"
+                  onClick={goToNext}
+                  className="gap-2 shadow-md"
+                >
+                  Next Event
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+            )}
           </div>
         </section>
       </main>
