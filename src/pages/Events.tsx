@@ -10,6 +10,9 @@ import asadbekSpeaker from "@/assets/team/asadbek-speaker.png";
 import eventStageImage from "@/assets/events/eventpic.jpg";
 import eventPosterImage from "@/assets/events/forwebsite.jpg";
 import eventGroupImage from "@/assets/events/eventpic2.jpg";
+import trafficIllustration from "@/assets/events/traffic-illustration.png";
+import tashkentTraffic1 from "@/assets/events/tashkent-traffic-1.png";
+import tashkentTraffic2 from "@/assets/events/tashkent-traffic-2.png";
 
 const Events = () => {
   const { t } = useLanguage();
