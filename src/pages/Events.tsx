@@ -12,7 +12,7 @@ import eventPosterImage from "@/assets/events/forwebsite.jpg";
 import eventGroupImage from "@/assets/events/eventpic2.jpg";
 import trafficIllustration from "@/assets/events/traffic-illustration.png";
 import tashkentTraffic1 from "@/assets/events/tashkent-traffic-1.png";
-import tashkentTraffic2 from "@/assets/events/tashkent-traffic-2.png";
+import tashkentTraffic2 from "@/assets/events/tashkent-traffic-3.png";
 
 const Events = () => {
   const { t } = useLanguage();
@@ -299,7 +299,7 @@ const Events = () => {
                     </Badge>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar className="h-3.5 w-3.5" />
-                      February 2025
+                      March 10, 2025
                     </div>
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-2">From Idea to Impact: Solving Urban Traffic in Tashkent</h3>
