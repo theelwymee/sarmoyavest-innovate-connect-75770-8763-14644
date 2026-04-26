@@ -322,6 +322,52 @@ const Events = () => {
                 </CardContent>
               </Card>
 
+              {/* Event Gallery — Layered Stacked Showcase */}
+              <div>
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Image className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-semibold">Event Gallery</h3>
+                </div>
+                <div className="relative flex items-center justify-center min-h-[320px] md:min-h-[480px] py-8 md:py-12 px-4">
+                  {/* Left image — slightly behind, tilted */}
+                  <div className="absolute left-0 md:left-8 top-1/2 -translate-y-1/2 w-[38%] md:w-[32%] aspect-[4/3] rounded-2xl overflow-hidden shadow-xl ring-1 ring-border/50 -rotate-6 z-10 transition-transform duration-500 hover:-rotate-3 hover:scale-105">
+                    <img
+                      src={tashkentTraffic1}
+                      alt="Tashkent traffic congestion case study"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                  </div>
+
+                  {/* Right image — slightly behind, tilted opposite */}
+                  <div className="absolute right-0 md:right-8 top-1/2 -translate-y-1/2 w-[38%] md:w-[32%] aspect-[4/3] rounded-2xl overflow-hidden shadow-xl ring-1 ring-border/50 rotate-6 z-10 transition-transform duration-500 hover:rotate-3 hover:scale-105">
+                    <img
+                      src={tashkentTraffic2}
+                      alt="Urban traffic in Tashkent"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                  </div>
+
+                  {/* Center featured image — largest, on top */}
+                  <div className="relative w-[55%] md:w-[46%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary/20 z-20 transition-transform duration-500 hover:scale-[1.03]">
+                    <img
+                      src={trafficIllustration}
+                      alt="From idea to impact — economic thinking in practice"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                    <div className="absolute left-4 bottom-4">
+                      <Badge variant="secondary" className="bg-background/90 text-foreground shadow-md">
+                        Featured
+                      </Badge>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* What Happened */}
               <Card className="overflow-hidden border-0 shadow-lg">
                 <CardContent className="p-8">
@@ -336,26 +382,6 @@ const Events = () => {
                   </p>
                 </CardContent>
               </Card>
-
-              {/* Event Gallery — Placeholder */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <Image className="h-5 w-5 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-semibold">Event Gallery</h3>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="aspect-[4/3] rounded-2xl border-2 border-dashed border-primary/20 bg-primary/[0.03] flex items-center justify-center">
-                      <div className="text-center space-y-2">
-                        <Image className="h-8 w-8 text-primary/30 mx-auto" />
-                        <p className="text-xs text-muted-foreground/60 font-medium">[Upload event photo]</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
 
               {/* Impact */}
               <Card className="overflow-hidden border-0 shadow-lg">
