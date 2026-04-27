@@ -13,6 +13,7 @@ import eventGroupImage from "@/assets/events/eventpic2.jpg";
 import trafficIllustration from "@/assets/events/traffic-illustration.png";
 import tashkentTraffic1 from "@/assets/events/tashkent-traffic-1.png";
 import tashkentTraffic2 from "@/assets/events/tashkent-traffic-3.png";
+import economicsOfTrust from "@/assets/events/economics-of-trust.png";
 
 const Events = () => {
   const { t } = useLanguage();
@@ -82,18 +83,21 @@ const Events = () => {
                     <p className="text-muted-foreground leading-relaxed text-base max-w-xl">
                       {t('events.upcoming.desc')}
                     </p>
-                    <Button size="lg" className="mt-2 shadow-lg">
-                      {t('events.upcoming.cta')}
-                      <ArrowRight className="h-4 w-4 ml-1" />
+                    <Button size="lg" className="mt-2 shadow-lg" asChild>
+                      <a href="https://t.me/sarmoyavest" target="_blank" rel="noopener noreferrer">
+                        {t('events.upcoming.cta')}
+                        <ArrowRight className="h-4 w-4 ml-1" />
+                      </a>
                     </Button>
                   </div>
 
-                  {/* Right decorative element */}
-                  <div className="hidden md:flex items-center justify-center w-48 h-48 rounded-2xl bg-primary/[0.06] border-2 border-dashed border-primary/15 flex-shrink-0">
-                    <div className="text-center space-y-2">
-                      <Sparkles className="h-10 w-10 text-primary/30 mx-auto" />
-                      <p className="text-xs text-muted-foreground/50 font-medium">{t('events.upcoming.soon')}</p>
-                    </div>
+                  {/* Right featured image */}
+                  <div className="hidden md:block w-56 h-56 rounded-2xl overflow-hidden shadow-lg ring-1 ring-primary/15 flex-shrink-0">
+                    <img
+                      src={economicsOfTrust}
+                      alt="The Economics of Trust"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </CardContent>
