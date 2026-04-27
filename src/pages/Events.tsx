@@ -303,7 +303,7 @@ const Events = () => {
                     </Badge>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar className="h-3.5 w-3.5" />
-                      March 10, 2025
+                      March 10
                     </div>
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-2">From Idea to Impact: Solving Urban Traffic in Tashkent</h3>
