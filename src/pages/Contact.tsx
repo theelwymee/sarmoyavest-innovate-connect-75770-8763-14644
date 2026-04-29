@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Linkedin, Twitter, MapPin } from "lucide-react";
+import { Mail, MapPin, Send, Instagram } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -140,14 +140,11 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-4">{t('contact.followUs')}</h3>
                   <div className="flex space-x-4">
-                    <a href="#" className="p-3 rounded-lg bg-muted hover:bg-primary/10 hover:text-primary transition-all" aria-label="Email">
-                      <Mail className="h-5 w-5" />
+                    <a href="https://t.me/sarmoyavest" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-muted hover:bg-primary/10 hover:text-primary transition-all" aria-label="Telegram">
+                      <Send className="h-5 w-5" />
                     </a>
-                    <a href="#" className="p-3 rounded-lg bg-muted hover:bg-primary/10 hover:text-primary transition-all" aria-label="LinkedIn">
-                      <Linkedin className="h-5 w-5" />
-                    </a>
-                    <a href="#" className="p-3 rounded-lg bg-muted hover:bg-primary/10 hover:text-primary transition-all" aria-label="Twitter">
-                      <Twitter className="h-5 w-5" />
+                    <a href="https://instagram.com/sarmoyavest" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-muted hover:bg-primary/10 hover:text-primary transition-all" aria-label="Instagram">
+                      <Instagram className="h-5 w-5" />
                     </a>
                   </div>
                 </div>
@@ -164,7 +161,7 @@ const Contact = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-muted/50">
+        <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/10">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12">{t('contact.faqTitle')}</h2>

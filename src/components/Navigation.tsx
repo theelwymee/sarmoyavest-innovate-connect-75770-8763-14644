@@ -20,14 +20,22 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  const handleLanguageToggle = () => {
-    setLanguage(language === 'en' ? 'ru' : 'en');
+  const nextLanguage = (lang: 'en' | 'ru' | 'uz'): 'en' | 'ru' | 'uz' => {
+    if (lang === 'en') return 'ru';
+    if (lang === 'ru') return 'uz';
+    return 'en';
   };
+
+  const handleLanguageToggle = () => {
+    setLanguage(nextLanguage(language));
+  };
+
+  const languageLabel = language === 'en' ? 'EN' : language === 'ru' ? 'RU' : 'UZ';
 
   const navLinks = [
     { path: "/", label: t('nav.home') },
     { path: "/about", label: t('nav.about') },
-    { path: "/advantages", label: t('nav.advantages') },
+    { path: "/insights", label: t('nav.insights') },
     { path: "/events", label: t('nav.events') },
     { path: "/projects", label: t('nav.projects') },
     { path: "/contact", label: t('nav.contact') },
@@ -61,7 +69,7 @@ const Navigation = () => {
             className="gap-2"
           >
             <Globe className="h-4 w-4" />
-            {language === 'en' ? 'RU' : 'EN'}
+            {languageLabel}
           </Button>
 
           {user ? (
@@ -124,7 +132,7 @@ const Navigation = () => {
               className="w-full gap-2"
             >
               <Globe className="h-4 w-4" />
-              {language === 'en' ? 'RU' : 'EN'}
+              {languageLabel}
             </Button>
             {user ? (
               <>

@@ -7,7 +7,8 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import { AuthProvider } from "./contexts/AuthContext";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Advantages from "./pages/Advantages";
+import Insights from "./pages/Insights";
+import InsightArticle from "./pages/InsightArticle";
 import Events from "./pages/Events";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
@@ -29,7 +30,10 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/advantages" element={<Advantages />} />
+              <Route path="/insights" element={<Insights />} />
+              <Route path="/insights/:slug" element={<InsightArticle />} />
+              {/* Legacy route — redirect old /advantages to /insights */}
+              <Route path="/advantages" element={<Insights />} />
               <Route path="/events" element={<Events />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />

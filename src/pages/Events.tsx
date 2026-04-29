@@ -253,14 +253,14 @@ const Events = () => {
                     <div className="p-2 bg-primary/10 rounded-lg">
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-semibold">Key Insights &amp; Takeaways</h3>
+                    <h3 className="text-2xl font-semibold">{t('events.keyInsights.title')}</h3>
                   </div>
                   <div className="space-y-4 text-muted-foreground leading-relaxed text-base">
                     <p>
-                      It demonstrated that even a small, committed group can create meaningful discussions and begin shaping a culture of informed financial decision-making.
+                      {t('events.keyInsights.p1')}
                     </p>
                     <p>
-                      The success of this inaugural session sets the stage for future events, including larger lectures, guest speaker sessions, and expanded participation.
+                      {t('events.keyInsights.p2')}
                     </p>
                   </div>
                 </CardContent>
@@ -275,17 +275,17 @@ const Events = () => {
                   className="gap-2"
                 >
                   <ArrowLeft className="h-4 w-4" />
-                  Previous Event
+                  {t('events.nav.previous')}
                 </Button>
                 <span className="text-sm text-muted-foreground font-medium">
-                  Event {currentEvent + 1} of {totalEvents}
+                  {t('events.nav.counter').replace('{current}', String(currentEvent + 1)).replace('{total}', String(totalEvents))}
                 </span>
                 <Button
                   size="lg"
                   onClick={goToNext}
                   className="gap-2 shadow-md"
                 >
-                  Next Event
+                  {t('events.nav.next')}
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
@@ -303,11 +303,11 @@ const Events = () => {
                     </Badge>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar className="h-3.5 w-3.5" />
-                      March 10
+                      {t('events.secondEvent.date')}
                     </div>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2">From Idea to Impact: Solving Urban Traffic in Tashkent</h3>
-                  <p className="text-lg text-muted-foreground">An interactive "From Paper to Practice" session</p>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2">{t('events.secondEvent.title')}</h3>
+                  <p className="text-lg text-muted-foreground">{t('events.secondEvent.subtitle')}</p>
                 </CardContent>
               </Card>
 
@@ -318,10 +318,10 @@ const Events = () => {
                     <div className="p-2 bg-primary/10 rounded-lg">
                       <Sparkles className="h-5 w-5 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-semibold">Event Overview</h3>
+                    <h3 className="text-2xl font-semibold">{t('events.secondEvent.overviewTitle')}</h3>
                   </div>
                   <p className="text-muted-foreground leading-relaxed text-base">
-                    This session was designed as an interactive "From Paper to Practice" experience, where participants explored how economic thinking can be applied to real-world challenges. Using traffic congestion in Tashkent as a case study, the session focused on evaluating practical solutions not only from a theoretical perspective, but also through the lens of feasibility, investment potential, and real-life implementation.
+                    {t('events.secondEvent.overviewDesc')}
                   </p>
                 </CardContent>
               </Card>
@@ -332,7 +332,7 @@ const Events = () => {
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <Image className="h-5 w-5 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-semibold">Event Gallery</h3>
+                  <h3 className="text-2xl font-semibold">{t('events.secondEvent.galleryTitle')}</h3>
                 </div>
                 <div className="relative flex items-center justify-center min-h-[320px] md:min-h-[480px] py-8 md:py-12 px-4">
                   {/* Left image — slightly behind, tilted */}
@@ -365,7 +365,7 @@ const Events = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                     <div className="absolute left-4 bottom-4">
                       <Badge variant="secondary" className="bg-background/90 text-foreground shadow-md">
-                        Featured
+                        {t('events.secondEvent.featured')}
                       </Badge>
                     </div>
                   </div>
@@ -379,10 +379,10 @@ const Events = () => {
                     <div className="p-2 bg-primary/10 rounded-lg">
                       <Users className="h-5 w-5 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-semibold">What Happened</h3>
+                    <h3 className="text-2xl font-semibold">{t('events.secondEvent.whatHappenedTitle')}</h3>
                   </div>
                   <p className="text-muted-foreground leading-relaxed text-base">
-                    Attendees were divided into groups, with each group assigned to analyze and defend one solution. After structured discussions, each group presented their arguments, focusing on effectiveness, cost, scalability, and potential challenges. The session concluded with an open debate, where participants evaluated which solution would be most viable in the context of Tashkent.
+                    {t('events.secondEvent.whatHappenedDesc')}
                   </p>
                 </CardContent>
               </Card>
@@ -395,10 +395,10 @@ const Events = () => {
                     <div className="p-2 bg-primary/10 rounded-lg">
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-semibold">Impact</h3>
+                    <h3 className="text-2xl font-semibold">{t('events.secondEvent.impactTitle')}</h3>
                   </div>
                   <p className="text-muted-foreground leading-relaxed text-base">
-                    This session marked a shift toward more interactive and application-based learning within Sarmoyavest. By combining economic theory with real-world problem-solving, participants were able to think critically, engage in meaningful discussions, and approach challenges from both entrepreneurial and analytical perspectives.
+                    {t('events.secondEvent.impactDesc')}
                   </p>
                 </CardContent>
               </Card>
@@ -412,17 +412,17 @@ const Events = () => {
                   className="gap-2"
                 >
                   <ArrowLeft className="h-4 w-4" />
-                  Previous Event
+                  {t('events.nav.previous')}
                 </Button>
                 <span className="text-sm text-muted-foreground font-medium">
-                  Event {currentEvent + 1} of {totalEvents}
+                  {t('events.nav.counter').replace('{current}', String(currentEvent + 1)).replace('{total}', String(totalEvents))}
                 </span>
                 <Button
                   size="lg"
                   onClick={goToNext}
                   className="gap-2 shadow-md"
                 >
-                  Next Event
+                  {t('events.nav.next')}
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
