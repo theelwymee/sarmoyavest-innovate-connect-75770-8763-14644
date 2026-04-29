@@ -162,6 +162,7 @@ export const insights: Insight[] = [
     image: startupsImg,
     date: "2026-04-14",
     readingTimeMin: 5,
+    viewsBaseline: 243,
     translations: {
       en: {
         category: "Investment",
