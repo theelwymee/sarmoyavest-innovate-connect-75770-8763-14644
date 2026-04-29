@@ -37,7 +37,7 @@ const Insights = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {insights.map((insight, index) => {
                 const t = insight.translations[locale] ?? insight.translations.en;
-                const reads = counts[insight.slug] ?? 0;
+                const reads = (counts[insight.slug] ?? 0) + (insight.viewsBaseline ?? 0);
                 return (
                   <Card
                     key={insight.slug}
