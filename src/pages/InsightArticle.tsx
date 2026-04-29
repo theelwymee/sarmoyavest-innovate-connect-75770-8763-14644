@@ -88,11 +88,32 @@ const InsightArticle = () => {
             </div>
 
             <div className="prose prose-lg max-w-none space-y-5 text-foreground/90">
-              {t.body.map((para, i) => (
-                <p key={i} className="leading-relaxed text-base md:text-lg">
-                  {para}
-                </p>
-              ))}
+              {t.body.map((para, i) => {
+                if (para.startsWith("## ")) {
+                  return (
+                    <h2
+                      key={i}
+                      className="text-2xl md:text-3xl font-semibold mt-10 mb-2 tracking-tight"
+                    >
+                      {para.slice(3)}
+                    </h2>
+                  );
+                }
+                const parts = para.split(/(\*\*[^*]+\*\*)/g);
+                return (
+                  <p key={i} className="leading-relaxed text-base md:text-lg">
+                    {parts.map((part, j) =>
+                      part.startsWith("**") && part.endsWith("**") ? (
+                        <strong key={j} className="font-semibold text-foreground">
+                          {part.slice(2, -2)}
+                        </strong>
+                      ) : (
+                        <span key={j}>{part}</span>
+                      ),
+                    )}
+                  </p>
+                );
+              })}
             </div>
           </div>
         </article>
