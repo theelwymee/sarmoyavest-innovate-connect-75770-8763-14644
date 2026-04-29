@@ -17,6 +17,7 @@ export interface Insight {
   image: string;
   date: string; // ISO
   readingTimeMin: number;
+  viewsBaseline?: number;
   translations: Record<Locale, InsightTranslations>;
 }
 
@@ -53,6 +54,7 @@ export const insights: Insight[] = [
     image: economicsImg,
     date: "2026-04-10",
     readingTimeMin: 5,
+    viewsBaseline: 268,
     translations: {
       en: {
         category: "Economics",

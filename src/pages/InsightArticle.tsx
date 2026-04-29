@@ -40,7 +40,7 @@ const InsightArticle = () => {
     locale === "ru" ? "ru-RU" : locale === "uz" ? "uz-UZ" : "en-US",
     { month: "long", day: "numeric", year: "numeric" },
   );
-  const reads = count ?? 0;
+  const reads = (count ?? 0) + (insight.viewsBaseline ?? 0);
 
   return (
     <div className="min-h-screen flex flex-col">
