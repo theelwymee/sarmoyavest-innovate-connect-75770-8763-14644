@@ -41,6 +41,16 @@ const InsightArticle = () => {
     { month: "long", day: "numeric", year: "numeric" },
   );
   const reads = (count ?? 0) + (insight.viewsBaseline ?? 0);
+  const renderInlineText = (text: string) =>
+    text.split(/(\*\*[^*]+\*\*)/g).map((part, j) =>
+      part.startsWith("**") && part.endsWith("**") ? (
+        <strong key={j} className="font-semibold text-foreground">
+          {part.slice(2, -2)}
+        </strong>
+      ) : (
+        <span key={j}>{part}</span>
+      ),
+    );
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -89,6 +99,8 @@ const InsightArticle = () => {
 
             <div className="prose prose-lg max-w-none space-y-5 text-foreground/90">
               {t.body.map((para, i) => {
+                if (para.startsWith("- ")) return null;
+
                 if (para.startsWith("## ")) {
                   return (
                     <h2
@@ -99,19 +111,27 @@ const InsightArticle = () => {
                     </h2>
                   );
                 }
-                const parts = para.split(/(\*\*[^*]+\*\*)/g);
+
+                const nextItems: string[] = [];
+                for (let j = i + 1; j < t.body.length && t.body[j].startsWith("- "); j += 1) {
+                  nextItems.push(t.body[j].slice(2));
+                }
+
                 return (
-                  <p key={i} className="leading-relaxed text-base md:text-lg">
-                    {parts.map((part, j) =>
-                      part.startsWith("**") && part.endsWith("**") ? (
-                        <strong key={j} className="font-semibold text-foreground">
-                          {part.slice(2, -2)}
-                        </strong>
-                      ) : (
-                        <span key={j}>{part}</span>
-                      ),
+                  <div key={i} className="space-y-4">
+                    <p className="leading-relaxed text-base md:text-lg">
+                      {renderInlineText(para)}
+                    </p>
+                    {nextItems.length > 0 && (
+                      <ul className="list-disc pl-6 space-y-2 text-base md:text-lg">
+                        {nextItems.map((item, j) => (
+                          <li key={j} className="leading-relaxed">
+                            {renderInlineText(item)}
+                          </li>
+                        ))}
+                      </ul>
                     )}
-                  </p>
+                  </div>
                 );
               })}
             </div>
